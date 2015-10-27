@@ -1,0 +1,24 @@
+<html>
+    <head>
+        <title>Lookit, it's Django, woo</title>
+    </head>
+    <body>
+        <h1>Sample internet for Django learnings</h1>
+            <div><p>We are internetting in a <strong>new</strong> way. Pretty rad.</p></div>
+        <div>
+            <h2>This is not Tripod or WordPress or Flask.</h2>
+                <p>No, this is <em>different</em>.</p>
+                <p>This is not how we made <a href="http://www.deviationobligatoire.com">Deviation Obligatoire</a>. Nope.</p>
+        </div>
+        <div>
+            <p>Updating text.</p>
+        </div>
+        {% for post in posts %}
+            <div>
+                <p>published: {{ post.published_date }}</p>
+                <h1><a href="">{{ post.title }}</a></h1>
+                <p>{{ post.text|linebreaks }}</p>
+            </div>
+        {% endfor %}
+    </body>
+</html>
